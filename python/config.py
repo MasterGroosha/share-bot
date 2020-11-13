@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-
-import re
-from urllib import parse
-
-url_regex = re.compile(r"[Hh]ttp[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+")
-token = "токен_бота"
-
+url_regex = r"[Hh]ttp[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
 output_base = 'https://t.me/share/url?url='
 
 intro_text = "Здравствуйте! Я помогу Вам создать ссылку для кнопки \"Поделиться\" в Telegram\n" \
