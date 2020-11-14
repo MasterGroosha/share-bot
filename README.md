@@ -1,14 +1,17 @@
-# Share-helper bot for Telegram
+# Генерация ссылок «поделиться в Telegram»
 
-На различных веб-сайтах можно встретить кнопку "поделиться в Telegram", позволяющая отправить определённую ссылку в (почти) любой чат в мессенджере. Бот, собранный из приведённых в репозитории исходников, позволяет генерировать ссылку для такой кнопки.
+На различных веб-сайтах можно встретить кнопку «поделиться в Telegram», позволяющая отправить определённую ссылку 
+в (почти) любой чат в мессенджере. Бот, собранный из приведённых в репозитории исходников, 
+позволяет генерировать ссылку для такой кнопки.
 
-![пример кнопки "поделиться"](share_button_screenshot.png)
+![пример кнопки «поделиться»](share_button_screenshot.png)
 
-В репозитории вы найдёте два варианта бота; первый, более старый, написан на **Python** сначала при помощи библиотеки [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI), а затем переписан на [aiogram](https://github.com/aiogram/aiogram). Версия для **Golang** использует библиотеку [telebot](https://github.com/tucnak/telebot/).
+В репозитории вы найдёте два варианта бота; один написан на **Python** при помощи фреймворка [aiogram](https://github.com/aiogram/aiogram). 
+Версия для **Golang** использует библиотеку [telebot](https://github.com/tucnak/telebot/).
 
 ## Системные требования
-**Python**: 3.7 и выше (из-за aiogram)  
-**Go**: при разработке использовалась 1.12.5, м.б. запустится на более старых.  
+**Python**: 3.7+.  
+**Go**: при разработке использовалась 1.12.5.  
 **ОС**: протестировано в Linux (Manjaro), должно работать и на Windows.
 
 ## Systemd
@@ -29,7 +32,7 @@ Environment=BOT_TOKEN=токен_бота
 ExecStart=/home/user/share-bot/share_bot
 
 # Для Python-версии (используется venv):
-# ExecStart=/home/user/share-bot/bin/python /home/user/share-bot/sharebot_aiogram.py
+# ExecStart=/home/user/share-bot/bin/python /home/user/share-bot/python/bot.py
 
 KillMode=process
 Restart=always
