@@ -7,8 +7,8 @@ class Config(BaseSettings):
     mode: str = "polling"  # "polling" or "webhook"
     drop_updates_on_restart: bool = False
     webhook_addr: str | None = None
-    webhook_path: str | None = None
-    webhook_secret: str = "aaaaa"
+    webhook_path: str = "/"
+    webhook_secret: SecretStr = "aaaaa"
 
 
 def get_config() -> Config:
