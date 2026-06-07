@@ -78,5 +78,3 @@ micros:
           default: "/"
         - name: WEBHOOK_SECRET
 ```
-
-Опробовать бота в деле можно по адресу: https://t.me/tgshare_bot
